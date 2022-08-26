@@ -1,0 +1,11 @@
+{
+    "*.{ts,vue}": [
+        "npm run lint"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md,vue}": [
+        "prettier --write"
+    ],
+    "src/**/*.+(js,jsx,ts,tsx,json,css,scss,md,vue)": [
+        "eslint"
+    ]
+}

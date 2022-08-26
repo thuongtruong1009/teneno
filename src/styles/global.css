@@ -1,0 +1,169 @@
+@import './base.css';
+@import './font.css';
+@tailwind base;
+@layer base {
+  html {
+    @apply font-primary;
+  }
+  body {
+    @apply bg-main-white;
+  }
+  h1 {
+    @apply text-h1 leading-h1;
+  }
+  h2 {
+    @apply text-h2 leading-h2;
+  }
+  h3 {
+    @apply text-h3 leading-h3;
+  }
+  h4 {
+    @apply text-h4 leading-h4;
+  }
+  h5 {
+    @apply text-h5 leading-h5;
+  }
+  h6 {
+    @apply text-h6 leading-h6;
+  }
+  p {
+    @apply text-small leading-small;
+  }
+  caption {
+    @apply text-caption leading-caption;
+  }
+  textarea,
+  input,
+  select,
+  button {
+    @apply outline-none;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00a3ff;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7a56fe;
+  }
+}
+
+@tailwind components;
+@layer components {
+  .blue-gradient {
+    background: linear-gradient(93.53deg, #384cff 0%, #00a3ff 107.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .btn {
+    @apply inline-flex items-center justify-between gap-8 text-white font-primary;
+  }
+  .btn svg {
+    @apply flex-shrink-0;
+  }
+  .btn-md {
+    @apply px-6 py-[10px] button-1 rounded-[13px];
+  }
+  .btn-primary {
+    @apply bg-primary-50;
+  }
+  .btn-secondary {
+    @apply text-base font-bold bg-neutral-100;
+  }
+  .radio {
+    @apply relative w-6 h-6 transition-all border-2 rounded-full appearance-none cursor-pointer border-neutral-40;
+  }
+  .radio::before {
+    @apply w-[14px] h-[14px] transition-all rounded-full absolute-center bg-primary-50 invisible opacity-0;
+  }
+  .radio:checked {
+    @apply border-primary-50;
+  }
+  .radio:checked::before {
+    @apply visible opacity-100;
+  }
+  input {
+    box-shadow: inset 100px 100px 100px 100px #f4f5f5;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  }
+}
+
+@tailwind utilities;
+@layer utilities {
+  .with-navbar {
+    @apply pb-24;
+  }
+  .with-button {
+    @apply pb-[76px];
+  }
+  .button-1 {
+    @apply font-bold leading-button-1 text-button-1;
+  }
+  .button-2 {
+    @apply font-bold leading-button-2 text-button-2;
+  }
+  .body-2 {
+    @apply text-body-2 leading-body-2;
+  }
+  .body-3 {
+    @apply text-body-3 leading-body-3;
+  }
+  .container {
+    @apply w-full px-4 mx-auto max-w-[377px] min-h-screen shadow-md font-primary;
+  }
+  .container-np {
+    @apply w-full mx-auto max-w-[377px] min-h-screen shadow-md;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-center-y {
+    @apply flex items-center;
+  }
+  .flex-center-x {
+    @apply flex justify-center;
+  }
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+  .absolute-center-y {
+    @apply absolute -translate-y-1/2 top-1/2;
+  }
+  .absolute-center {
+    @apply content-[""] absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
+  }
+  .absolute-center-x {
+    @apply absolute -translate-x-1/2 left-1/2;
+  }
+  .image-container {
+    @apply relative;
+  }
+  .image-container span {
+    position: unset !important;
+    @apply !h-full;
+  }
+  .image-container .image {
+    @apply object-cover !w-full !h-full !relative;
+  }
+  .bg-card {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7038165608040091) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+  }
+}
