@@ -1,29 +1,34 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    darkMode: 'class',
+    arbitrary: true,
     content: [
-        "./index.html",
-        "./src/**/*.{vue,js,ts,jsx,tsx}",
+        './components/**/*.{js,vue,ts}',
+        './layouts/**/*.vue',
+        './pages/**/*.vue',
+        './plugins/**/*.{js,ts}',
+        './nuxt.config.{js,ts}',
     ],
     theme: {
         extend: {
             colors: {
                 main: {
-                    black: "#010F07",
-                    blue: "#384CFF",
-                    cyan: "#00A3FF",
-                    red: "#FF0000",
-                    white: "#FFFFFF",
-                    milk: "#EEEEEE",
-                    green: "#36FF00",
-                    dark_grey: "#555555",
-                    medium_grey: "#999999",
-                    light_grey: "#AAAAAA",
+                    black: '#010F07',
+                    blue: '#384CFF',
+                    cyan: '#00A3FF',
+                    red: '#FF0000',
+                    white: '#FFFFFF',
+                    milk: '#EEEEEE',
+                    green: '#36FF00',
+                    dark_grey: '#555555',
+                    medium_grey: '#999999',
+                    light_grey: '#AAAAAA',
 
                     //         grey: '#343E58',
                     //         blue: '07C6FD',
                     purple: '#7A56FE',
                     dark_purple: '#EAEAEA',
-                    pink: '#fd65b7'
+                    pink: '#fd65b7',
                 },
                 neutral: {
                     100: '#2a2846',
@@ -55,7 +60,7 @@ module.exports = {
                 danger: '#FE5D5D',
             },
             fontFamily: {
-                primary: 'SF Pro Display'
+                primary: 'SF Pro Display',
             },
             aspectRatio: {
                 '9/16': '9 / 16',
@@ -76,8 +81,8 @@ module.exports = {
                 h6: '1rem',
                 'button-1': '18px',
                 'button-2': '16px',
-                'caption': '14px',
-                'small': '12px',
+                caption: '14px',
+                small: '12px',
                 'body-1': '24px',
                 'body-2': '16px',
                 'body-3': '14px',
@@ -91,8 +96,8 @@ module.exports = {
                 h6: '16px',
                 'button-1': '24px',
                 'button-2': '24px',
-                'caption': '18px',
-                'small': '16px',
+                caption: '18px',
+                small: '16px',
                 'body-1': '32px',
                 'body-2': '24px',
                 'body-3': '18px',
@@ -100,4 +105,4 @@ module.exports = {
         },
     },
     plugins: [],
-}
+};

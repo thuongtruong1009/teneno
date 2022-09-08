@@ -2,44 +2,58 @@ module.exports = {
     root: true,
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
+        node: true,
     },
     ignorePatterns: ['.eslintrc.js'],
     extends: [
-        "eslint:recommended",
-        "plugin:vue/vue3-essential",
-        "plugin:@typescript-eslint/recommended",
+        // "@antfu",
+        'eslint:recommended',
+        'plugin:vue/vue3-essential',
+        'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
-        "@vue/eslint-config-typescript/recommended",
-        "@vue/eslint-config-prettier"
+        '@vue/eslint-config-typescript/recommended',
+        '@vue/eslint-config-prettier',
+        'plugin:vue/recommended',
+        '@nuxtjs/eslint-config-typescript',
+        'prettier/vue',
+        'stylelint-config-standard',
+        'stylelint-config-prettier',
+        'stylelint-config-standard-scss',
+        'stylelint-config-prettier-scss',
     ],
     parserOptions: {
-        ecmaVersion: "latest",
-        parser: "@typescript-eslint/parser",
-        sourceType: "module"
+        ecmaVersion: 'latest',
+        parser: '@typescript-eslint/parser',
+        sourceType: 'module',
     },
-    plugins: [
-        "vue",
-        "@typescript-eslint",
-        '@typescript-eslint/eslint-plugin'
-    ],
+    plugins: ['vue', '@typescript-eslint', '@typescript-eslint/eslint-plugin'],
     rules: {
         '@typescript-eslint/interface-name-prefix': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
-        "@typescript-eslint/explicit-member-accessibility": 0,
-        'prettier/prettier': ['off', { singleQuote: true }],
-        "@typescript-eslint/no-parameter-properties": 0,
-        "@typescript-eslint/ban-types": 0,
-        "@typescript-eslint/no-var-requires": 0
-    },
-    overrides: [{
-        files: [
-            "cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}"
+        '@typescript-eslint/explicit-member-accessibility': 0,
+        // 'prettier/prettier': ['off', { singleQuote: true }],
+        '@typescript-eslint/no-parameter-properties': 0,
+        '@typescript-eslint/ban-types': 0,
+        '@typescript-eslint/no-var-requires': 0,
+        semi: [2, 'never'],
+        'no-console': 'off',
+        'vue/max-attributes-per-line': 'off',
+        'prettier/prettier': [
+            'error',
+            {
+                htmlWhitespaceSensitivity: 'ignore',
+                semi: false,
+                singleQuote: true,
+            },
         ],
-        extends: [
-            "plugin:cypress/recommended"
-        ]
-    }]
-}
+    },
+    overrides: [
+        {
+            files: ['cypress/e2e/**.{cy,spec}.{js,ts,jsx,tsx}'],
+            extends: ['plugin:cypress/recommended'],
+        },
+    ],
+};

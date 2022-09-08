@@ -1,14 +1,22 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
+    "extends": "./.nuxt/tsconfig.json",
+    "compilerOptions": {
+        "strict": true
+        // "target": "esnext",
+        // "module": "esnext",
+        // "moduleResolution": "node",
+        // "lib": ["esnext", "esnext.asynciterable", "dom"],
+        // "esModuleInterop": true,
+        // "allowJs": true,
+        // "sourceMap": true,
+        // "strict": true,
+        // "noEmit": true,
+        // "baseUrl": ".",
+        // "paths": {
+        //     "~/*": ["./*"],
+        //     "@/*": ["./*"],
+        // },
+        // "types": ["@types/node", "@nuxt/types", "@pinia/nuxt", "@vueuse/nuxt",],
     },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
-    }
-  ]
+    "exclude": ["node_modules"]
 }

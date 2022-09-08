@@ -4,66 +4,89 @@
 
 <h1 align="center">Teneno<img src="public/favicon.ico" width="32" height="32" alt="logo" /></h1>
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/11247099/140462375-7b7ac4db-35b7-453c-8a05-13d8d20282c4.png" width="600"/>
+</p>
+
+<h2 align="center">
+<a href="https://github.com/antfu/vitesse">Vitesse</a> for Nuxt 3
+</h2><br>
+
+<pre align="center">
+🧪 Working in Progress
+</pre>
+
+<p align="center">
+<br>
+<a href="https://vitesse-nuxt3.netlify.app/">🖥 Online Preview</a>
+<br><br>
+<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
+</p>
+
+## Features
+
+-   [💚 Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
+
+-   ⚡️ Vite - Instant HMR
+
+-   🎨 [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
+
+-   😃 Use icons from any icon sets in Pure CSS, powered by [UnoCSS](https://github.com/antfu/unocss)
+
+-   🔥 The `<script setup>` syntax
+
+-   🍍 [State Management via Pinia](https://pinia.esm.dev), see [./composables/user.ts](./composables/user.ts)
+
+-   📑 [Layout system](./layouts)
+
+-   📥 APIs auto importing - for Composition API, VueUse and custom composables.
+
+-   🏎 Zero-config cloud functions and deploy
+
+-   🦾 TypeScript, of course
+
+## Plugins
+
 ## Demo
 
 [![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/thuongtruong1009/teneno/tree/main/?file=.stackblitzrc)
 
-This template should help get you started developing with Vue 3 in Vite.
+### Nuxt Modules
 
-## Recommended IDE Setup
+-   [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs.
+-   [ColorMode](https://github.com/nuxt-community/color-mode-module) - dark and Light mode with auto detection made easy with Nuxt.
+-   [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine.
+-   [Pinia](https://pinia.esm.dev/) - intuitive, type safe, light and flexible Store for Vue.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## IDE
 
-## Type Support for `.vue` Imports in TS
+We recommend using [VS Code](https://code.visualstudio.com/) with [Volar](https://github.com/johnsoncodehk/volar) to get the best experience (You might want to disable Vetur if you have it).
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Variations
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+-   [vitesse](https://github.com/antfu/vitesse) - Opinionated Vite Starter Template
+-   [vitesse-lite](https://github.com/antfu/vitesse-lite) - Lightweight version of Vitesse
+-   [vitesse-nuxt-bridge](https://github.com/antfu/vitesse-nuxt-bridge) - Vitesse for Nuxt 2 with Bridge
+-   [vitesse-webext](https://github.com/antfu/vitesse-webext) - WebExtension Vite starter template
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Try it now!
 
-## Customize configuration
+### Online
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+<a href="https://stackblitz.com/github/antfu/vitesse-nuxt3"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
 
-## Project Setup
+### GitHub Template
 
-```sh
-npm install
-```
+[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-nuxt3/generate).
 
-### Compile and Hot-Reload for Development
+### Clone to local
 
-```sh
-npm run dev
-```
+If you prefer to do it manually with the cleaner git history
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run build
-npm run test:e2e # or `npm run test:e2e:ci` for headless testing
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```bash
+npx degit antfu/vitesse-nuxt3 my-nuxt3-app
+cd my-nuxt3-app
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
 
 ## References
